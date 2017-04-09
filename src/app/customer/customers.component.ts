@@ -18,7 +18,7 @@ export class CustomersComponent implements OnInit {
 
     ngOnInit() {
 
-        // Rx Observable Version with Subscribe Function 
+        // Rx Observable Version
         this._customerService.getCustomers_RxObservable()
             .subscribe(
             // Hey it worked
