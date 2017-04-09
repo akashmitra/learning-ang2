@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
-// import { CustomerService } from './customer.service';
+import { CustomerService } from './customer.service';
 
 @Component({
     selector: 'app-customers',
     templateUrl: 'app/customer/customers.component.html',
-    // providers: [CustomerService]
+    providers: [CustomerService]
 })
 
 export class CustomersComponent implements OnInit {
     customers: any[];
 
-    constructor() { }
+    constructor(private _customerService: CustomerService) { }
 
     ngOnInit() {
-        this.customers = customerService.getCustomers();
+        this.customers = this._customerService.getCustomers();
     }
-}
+}   

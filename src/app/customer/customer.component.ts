@@ -6,6 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 
 export class CustomerComponent implements OnInit {
+
     // customer: any;
     customerColor = 'gray';
 
