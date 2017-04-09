@@ -1,0 +1,18 @@
+<h1>{{title}}</h1>
+<div [style.color]="fontcolor">
+    Hello {{name}}
+</div>
+<br>
+<input type="text" [value]="name" (keyup.enter)="name=$event.target.value">
+<input type="text" [(ngModel)]="name">
+<button (click)="changeColor()">Change Color</button>
+
+<app-customers></app-customers>
+
+<!--<ul>
+    <li *ngFor="let customer of customers">
+        <span [style.color]="fontcolor">ID :: {{customer.id}}</span>&nbsp;
+        <span>Name :: {{customer.name}}</span>
+        <!--<app-customer [customer]="cust"></app-customer>
+    </li>
+</ul>-->
